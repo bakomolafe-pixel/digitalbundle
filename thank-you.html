@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Skill to Cash — Your Files Are Ready</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .ty-hero {
+      padding: 80px 0 48px;
+      text-align: center;
+      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+    }
+    .ty-check {
+      width: 88px; height: 88px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      box-shadow: 0 16px 32px rgba(22,163,74,0.3);
+    }
+    .ty-h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+    .ty-sub { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0 auto 40px; }
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      max-width: 980px;
+      margin: 0 auto 64px;
+      padding: 0 24px;
+    }
+    .download-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.3s;
+    }
+    .download-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .dl-icon {
+      width: 44px; height: 44px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .download-card h3 { font-size: 1.05rem; }
+    .download-card p { color: var(--muted); font-size: 0.9rem; flex: 1; }
+    .download-card .btn { width: 100%; }
+    .next-steps {
+      max-width: 760px;
+      margin: 0 auto 80px;
+      padding: 40px;
+      background: var(--light);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .next-steps h2 { margin-bottom: 24px; text-align: center; }
+    .step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .step:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .step-num {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800;
+    }
+    .step h4 { margin-bottom: 4px; }
+    .step p { color: var(--muted); font-size: 0.95rem; }
+    .upsell {
+      background: linear-gradient(135deg, var(--darker), var(--dark));
+      color: #fff;
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .upsell h2 { color: #fff; margin-bottom: 16px; }
+    .upsell p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 28px; }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Skill<span>to</span>Cash</a>
+      <a href="mailto:support@skilltocash.com" class="btn btn-sm btn-primary">Need Help?</a>
+    </div>
+  </header>
+
+  <section class="ty-hero">
+    <div class="container">
+      <div class="ty-check">✓</div>
+      <h1 class="ty-h1">You're In. Welcome to Skill to Cash.</h1>
+      <p class="ty-sub">Your payment is confirmed. Below are all your files — the ebook plus every bonus. Bookmark this page. We've also sent everything to your email for lifetime access.</p>
+    </div>
+  </section>
+
+  <div class="download-grid">
+    <div class="download-card">
+      <div class="dl-icon">📘</div>
+      <h3>Skill to Cash — 25-Page Playbook</h3>
+      <p>The core ebook. Read it tonight. Apply it tomorrow.</p>
+      <a href="#" class="btn btn-primary btn-sm">Download Ebook</a>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">🎯</div>
+      <h3>Bonus 1: 101 Funnel Prompts</h3>
+      <p>Build a complete sales funnel — copy, ads, emails, follow-ups.</p>
+      <a href="#" class="btn btn-primary btn-sm">Download Pack</a>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">🤖</div>
+      <h3>Bonus 2: 150 AI Prompts for Digital Income</h3>
+      <p>Plug into ChatGPT, Gemini or Claude and create faster.</p>
+      <a href="#" class="btn btn-primary btn-sm">Download Pack</a>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">📦</div>
+      <h3>Bonus 3: Premium PLR Resource Vault</h3>
+      <p>Done-for-you products. Rebrand and resell as your own.</p>
+      <a href="#" class="btn btn-primary btn-sm">Open Vault</a>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">🎨</div>
+      <h3>Bonus 4: 150+ Canva Premium Templates</h3>
+      <p>Open in Canva (free) — IG, TikTok, ebook covers, flyers.</p>
+      <a href="#" class="btn btn-primary btn-sm">Open Templates</a>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">💬</div>
+      <h3>Bonus 5: 50 WhatsApp Closing Scripts</h3>
+      <p>Word-for-word messages that turn chats into alerts.</p>
+      <a href="#" class="btn btn-primary btn-sm">Download Scripts</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="next-steps">
+      <h2>Your First 3 Steps (Do These Today)</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h4>Read Chapters 1 + 2 Tonight (45 minutes)</h4>
+          <p>Don't skip. Pick the skill that pays. Repackage it as a clear offer. By page 12, you'll already know what you're selling.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h4>Pick One WhatsApp Closing Script</h4>
+          <p>Open Bonus 5. Pick the script that fits where you usually get stuck. Save it as a quick-reply on WhatsApp.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h4>Send 3 DMs Tomorrow Using The System</h4>
+          <p>Use Chapter 5's framework. Track who replies. Your first sale usually comes from the 3rd–7th conversation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="upsell">
+    <div class="container">
+      <h2>Want Us To Set It Up With You?</h2>
+      <p>We have a small private group where members get weekly live Q&A, hot-seat reviews, and accountability. ₦9,500 one-time. Lifetime access. Limited to 50 spots.</p>
+      <a href="#" class="btn btn-xl btn-light">Join the Inner Circle →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <small>© 2026 Skill to Cash. Need help? <a href="mailto:support@skilltocash.com" style="color:var(--accent)">support@skilltocash.com</a></small>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
