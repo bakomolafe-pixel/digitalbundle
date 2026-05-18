@@ -984,3 +984,123 @@ h3 { font-size: 1.25rem; }
   .sticker { font-size: 0.7rem; padding: 6px 10px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+
+/* ============ PAIN STACK (Aren't You Tired Of…) ============ */
+.pain-stack {
+  max-width: 880px;
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pain-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px 28px;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--danger);
+  border-radius: var(--radius);
+  transition: all 0.3s;
+}
+.pain-row:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--primary);
+}
+.pain-row:hover .pain-mark { transform: scale(1.1) rotate(-5deg); }
+.pain-mark {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s;
+}
+.pain-row h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+.pain-row p {
+  color: var(--muted);
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+/* ============ CHANGES SECTION (What Changes When You Get This Right) ============ */
+.changes {
+  padding: 96px 0;
+  background:
+    radial-gradient(ellipse at top right, rgba(245,158,11,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(22,163,74,0.06) 0%, transparent 50%),
+    #fff;
+}
+.changes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.change-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.change-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.change-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.change-card:hover::before { transform: scaleX(1); }
+.change-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary-light), #fef3c7);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+.change-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.change-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks for the new sections */
+@media (max-width: 540px) {
+  .changes { padding: 64px 0; }
+  .pain-row { padding: 22px 20px; gap: 16px; }
+  .pain-mark { width: 44px; height: 44px; font-size: 1.4rem; border-radius: 10px; }
+  .pain-row h3 { font-size: 1rem; }
+}
