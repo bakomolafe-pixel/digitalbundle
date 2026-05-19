@@ -115,3 +115,72 @@ document.addEventListener('DOMContentLoaded', () => {
   setupStickyCTA();
   setupReveal();
 });
+
+
+
+// ----- 7. SALES POP-UP (Social Proof Notification) -----
+function setupSalesPop() {
+  const pop = document.getElementById('salesPop');
+  const popName = document.getElementById('popName');
+  const popTime = document.getElementById('popTime');
+  const popClose = document.getElementById('popClose');
+  if (!pop || !popName || !popTime) return;
+
+  const buyers = [
+    { name: 'Adaeze from Enugu', time: '2 minutes ago' },
+    { name: 'Tobi from Lagos', time: '4 minutes ago' },
+    { name: 'Blessing from PH', time: '6 minutes ago' },
+    { name: 'Emeka from Abuja', time: '8 minutes ago' },
+    { name: 'Seyi from Ibadan', time: '11 minutes ago' },
+    { name: 'Nkechi from Owerri', time: '13 minutes ago' },
+    { name: 'Chisom from Uyo', time: '15 minutes ago' },
+    { name: 'Tunde from Abeokuta', time: '18 minutes ago' },
+    { name: 'Amina from Kano', time: '21 minutes ago' },
+    { name: 'David from Benin', time: '24 minutes ago' },
+    { name: 'Funke from Osogbo', time: '27 minutes ago' },
+    { name: 'Chidi from Onitsha', time: '30 minutes ago' },
+  ];
+
+  let index = 0;
+  let dismissed = false;
+  let showTimeout, hideTimeout, cycleInterval;
+
+  function showPop() {
+    if (dismissed) return;
+    const buyer = buyers[index % buyers.length];
+    popName.textContent = buyer.name;
+    popTime.textContent = buyer.time;
+    pop.classList.add('show');
+
+    // Hide after 5 seconds
+    hideTimeout = setTimeout(() => {
+      pop.classList.remove('show');
+    }, 5000);
+
+    index++;
+  }
+
+  // Close button
+  if (popClose) {
+    popClose.addEventListener('click', () => {
+      pop.classList.remove('show');
+      dismissed = true;
+      clearTimeout(showTimeout);
+      clearTimeout(hideTimeout);
+      clearInterval(cycleInterval);
+    });
+  }
+
+  // Start after 8 seconds, then cycle every 15 seconds
+  showTimeout = setTimeout(() => {
+    showPop();
+    cycleInterval = setInterval(() => {
+      showPop();
+    }, 15000);
+  }, 8000);
+}
+
+// Add to init
+document.addEventListener('DOMContentLoaded', () => {
+  setupSalesPop();
+});
